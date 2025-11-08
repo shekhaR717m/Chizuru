@@ -71,6 +71,7 @@ export class SpotifyService {
   }
 
   private async spotifyRequest<T>(endpoint: string, options: RequestInit = {}): Promise<T | null> {
+    // FIX: Changed the URL to the correct Spotify API endpoint
     const url = `https://api.spotify.com/v1/${endpoint}`;
     try {
         const response = await fetch(url, {

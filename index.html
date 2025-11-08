@@ -10,16 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
-  window.onSpotifyWebPlaybackSDKReady = () => {
-    console.log('Spotify SDK is loaded and ready.');
-    // You can leave this empty or just log a message.
-  };
-</script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        console.log('Spotify SDK is loaded and ready.');
+        // You can leave this empty or just log a message.
+      };
+    </script>
 
-<script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
+
+        /* --- THEME & BACKGROUND CHANGES --- */
+
+        /* 1. Light theme background color (This is Tailwind's gray-100) */
+        background-color: #f3f4f6; 
+
+        /* 2. Background image */
+        /* !!! IMPORTANT: Change 'your-image.jpg' to your actual image file name !!! */
+        /* This path assumes your image is in the 'public' folder. */
+        background-image: url('/your-image.jpg');
+        
+        /* 3. Styles to make the background image cover the screen */
+        background-size: cover;      /* Cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not tile the image */
+        background-attachment: fixed;  /* Image stays in place when scrolling */
       }
       .fade-in {
         animation: fadeIn 0.5s ease-in-out;
@@ -59,7 +75,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-gray-900">
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

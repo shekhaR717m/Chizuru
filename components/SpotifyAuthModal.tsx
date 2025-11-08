@@ -87,7 +87,8 @@ const SpotifyAuthModal: React.FC<SpotifyAuthModalProps> = ({ isOpen, onClose, on
           <li>Click "Get Token" and log in to your Spotify account.</li>
           <li>
             Check the following scopes:
-            <code className="block bg-gray-900 text-xs p-2 rounded mt-1">streaming, user-read-playback-state, user-modify-playback-state</code>
+            {/* FIX: Added missing user-read-email and user-read-private scopes */}
+            <code className="block bg-gray-900 text-xs p-2 rounded mt-1">streaming, user-read-email, user-read-private, user-read-playback-state, user-modify-playback-state</code>
           </li>
           <li>Copy the generated "OAuth Token" and paste it below.</li>
         </ol>
