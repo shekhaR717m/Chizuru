@@ -1,0 +1,9 @@
+
+{
+  "name": "Chizuru: Your Companion",
+  "description": "A web app with an anime avatar that acts as a 'rent-a-girlfriend' style chatbot, connected to the internet for real-time answers and delivering responses via text and a 'talking head' video animation.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
