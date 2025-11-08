@@ -9,7 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+  window.onSpotifyWebPlaybackSDKReady = () => {
+    console.log('Spotify SDK is loaded and ready.');
+    // You can leave this empty or just log a message.
+  };
+</script>
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
